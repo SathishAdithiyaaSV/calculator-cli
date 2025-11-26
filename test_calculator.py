@@ -13,7 +13,7 @@ def test_mul():
 
 def test_div():
     assert div(6, 3) == 2
-    assert pytest.approx(div(1, 3), 0.333333)
+    assert div(1, 3) == pytest.approx(0.333333, rel=1e-3)
 
 def test_div_by_zero():
     with pytest.raises(ValueError):
